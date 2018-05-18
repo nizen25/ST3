@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/ValidatorTransformerSOAPWebService/ValidatorTransformerSOAPWebService?wsdl" uri="src/conf/xml-resources/web-service-references/ValidatorTransformerSOAPWebService/wsdl/localhost_8080/ValidatorTransformerSOAPWebService/ValidatorTransformerSOAPWebService.wsdl"/>
+    <system systemId="http://localhost:8080/ValidatorTransformerSOAPWebService/ValidatorTransformerSOAPWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/ValidatorTransformerSOAPWebService/wsdl/localhost_8080/ValidatorTransformerSOAPWebService/ValidatorTransformerSOAPWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/TransformerSOAPWebService/TransformerSOAPWebService?wsdl" uri="src/conf/xml-resources/web-service-references/TransformerSOAPWebService/wsdl/localhost_8080/TransformerSOAPWebService/TransformerSOAPWebService.wsdl"/>
+    <system systemId="http://localhost:8080/TransformerSOAPWebService/TransformerSOAPWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/TransformerSOAPWebService/wsdl/localhost_8080/TransformerSOAPWebService/TransformerSOAPWebService.xsd_1.xsd"/>
+</catalog>
