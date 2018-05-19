@@ -5,7 +5,9 @@
  */
 package za.ac.tut.business;
 
+import java.util.List;
 import javax.ejb.Local;
+import za.ac.tut.entities.Student;
 
 /**
  *
@@ -14,4 +16,8 @@ import javax.ejb.Local;
 @Local
 public interface StudentFacadeLocal {
     public void addStudent(String studentXML) throws Exception;
+    public Student getStudent(Long id) throws Exception;
+    public List<Student> getStudents() throws Exception;
+    public void deleteStudent(Long id) throws Exception;
+    public void updateStudent(String StudentXML) throws Exception;
 }

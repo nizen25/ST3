@@ -1,8 +1,10 @@
 
 package za.ac.tut.jws.client;
 
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.Action;
@@ -23,6 +25,77 @@ import javax.xml.ws.ResponseWrapper;
 })
 public interface TUTSOAPWebService {
 
+
+    /**
+     * 
+     * @param id
+     * @return
+     *     returns za.ac.tut.jws.client.Student
+     * @throws Exception_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getStudent", targetNamespace = "http://jws.tut.ac.za/", className = "za.ac.tut.jws.client.GetStudent")
+    @ResponseWrapper(localName = "getStudentResponse", targetNamespace = "http://jws.tut.ac.za/", className = "za.ac.tut.jws.client.GetStudentResponse")
+    @Action(input = "http://jws.tut.ac.za/TUTSOAPWebService/getStudentRequest", output = "http://jws.tut.ac.za/TUTSOAPWebService/getStudentResponse", fault = {
+        @FaultAction(className = Exception_Exception.class, value = "http://jws.tut.ac.za/TUTSOAPWebService/getStudent/Fault/Exception")
+    })
+    public Student getStudent(
+        @WebParam(name = "id", targetNamespace = "")
+        Long id)
+        throws Exception_Exception
+    ;
+
+    /**
+     * 
+     * @param studentXML
+     * @throws Exception_Exception
+     */
+    @WebMethod
+    @RequestWrapper(localName = "updateStudent", targetNamespace = "http://jws.tut.ac.za/", className = "za.ac.tut.jws.client.UpdateStudent")
+    @ResponseWrapper(localName = "updateStudentResponse", targetNamespace = "http://jws.tut.ac.za/", className = "za.ac.tut.jws.client.UpdateStudentResponse")
+    @Action(input = "http://jws.tut.ac.za/TUTSOAPWebService/updateStudentRequest", output = "http://jws.tut.ac.za/TUTSOAPWebService/updateStudentResponse", fault = {
+        @FaultAction(className = Exception_Exception.class, value = "http://jws.tut.ac.za/TUTSOAPWebService/updateStudent/Fault/Exception")
+    })
+    public void updateStudent(
+        @WebParam(name = "StudentXML", targetNamespace = "")
+        String studentXML)
+        throws Exception_Exception
+    ;
+
+    /**
+     * 
+     * @param id
+     * @throws Exception_Exception
+     */
+    @WebMethod
+    @RequestWrapper(localName = "deleteStudent", targetNamespace = "http://jws.tut.ac.za/", className = "za.ac.tut.jws.client.DeleteStudent")
+    @ResponseWrapper(localName = "deleteStudentResponse", targetNamespace = "http://jws.tut.ac.za/", className = "za.ac.tut.jws.client.DeleteStudentResponse")
+    @Action(input = "http://jws.tut.ac.za/TUTSOAPWebService/deleteStudentRequest", output = "http://jws.tut.ac.za/TUTSOAPWebService/deleteStudentResponse", fault = {
+        @FaultAction(className = Exception_Exception.class, value = "http://jws.tut.ac.za/TUTSOAPWebService/deleteStudent/Fault/Exception")
+    })
+    public void deleteStudent(
+        @WebParam(name = "id", targetNamespace = "")
+        Long id)
+        throws Exception_Exception
+    ;
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<za.ac.tut.jws.client.Student>
+     * @throws Exception_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getStudents", targetNamespace = "http://jws.tut.ac.za/", className = "za.ac.tut.jws.client.GetStudents")
+    @ResponseWrapper(localName = "getStudentsResponse", targetNamespace = "http://jws.tut.ac.za/", className = "za.ac.tut.jws.client.GetStudentsResponse")
+    @Action(input = "http://jws.tut.ac.za/TUTSOAPWebService/getStudentsRequest", output = "http://jws.tut.ac.za/TUTSOAPWebService/getStudentsResponse", fault = {
+        @FaultAction(className = Exception_Exception.class, value = "http://jws.tut.ac.za/TUTSOAPWebService/getStudents/Fault/Exception")
+    })
+    public List<Student> getStudents()
+        throws Exception_Exception
+    ;
 
     /**
      * 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-    <system systemId="http://localhost:8080/DHESOAPWebService/DHESOAPWebService?wsdl" uri="/home/sydney/Documents/PersonalDocs/BTech/TPG401T/projects/TransformerSOAPWebServiceApp/src/conf/wsdl/MEMANIV-LPT2_8080/DHESOAPWebService/DHESOAPWebService.wsdl"/>
-    <system systemId="http://localhost:8080/DHESOAPWebService/DHESOAPWebService?xsd=1" uri="/home/sydney/Documents/PersonalDocs/BTech/TPG401T/projects/TransformerSOAPWebServiceApp/src/conf/wsdl/MEMANIV-LPT2_8080/DHESOAPWebService/DHESOAPWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/DHESOAPWebService/DHESOAPWebService?wsdl" uri="src/conf/xml-resources/web-service-references/DHESOAPWebService_3/wsdl/localhost_8080/DHESOAPWebService/DHESOAPWebService.wsdl"/>
+    <system systemId="http://localhost:8080/DHESOAPWebService/DHESOAPWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/DHESOAPWebService_3/wsdl/localhost_8080/DHESOAPWebService/DHESOAPWebService.xsd_1.xsd"/>
 </catalog>

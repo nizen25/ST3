@@ -4,13 +4,33 @@
         <servlet-name>AddStudentServlet</servlet-name>
         <servlet-class>za.ac.tut.web.AddStudentServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FindStudentServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.FindStudentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FindStudentServlets</servlet-name>
+        <servlet-class>za.ac.tut.web.FindStudentsServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddStudentServlet</servlet-name>
         <url-pattern>/AddStudentServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FindStudentServlet</servlet-name>
+        <url-pattern>/FindStudentServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FindStudentServlets</servlet-name>
+        <url-pattern>/FindStudentsServlet.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/errorPage.jsp</location>
+    </error-page>
 </web-app>

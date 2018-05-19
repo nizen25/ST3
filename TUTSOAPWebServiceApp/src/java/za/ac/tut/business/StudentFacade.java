@@ -5,6 +5,7 @@
  */
 package za.ac.tut.business;
 
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -46,6 +47,41 @@ public class StudentFacade extends AbstractFacade<Student> implements StudentFac
             create(student);
             //forward the student xml
             forwardStudent(studentXML);
+        } else {
+            throw new Exception("This XML file is not valid.");
+        }
+    }
+    
+    @Override
+    public Student getStudent(Long id) throws Exception {
+        final Student student = find(id);
+        return (student != null) ? student : null;
+    }
+
+    @Override
+    public List<Student> getStudents() throws Exception {
+        return findAll();
+    }
+
+    @Override
+    public void deleteStudent(Long id) throws Exception {
+        final Student student = getStudent(id);
+        if (student != null) {
+            remove(student);
+        } else{
+            System.out.println("Student does not exist.");
+        }
+    }
+
+    @Override
+    public void updateStudent(String studentXML) throws Exception {
+        String studentXSDFile = "/home/sydney/learnerXSDFile.xsd";
+        //validate this xml
+        if (Utility.validate(studentXML, studentXSDFile)) {
+            //umarshal the xml string: xml --> student object
+            Student learner = (Student) Utility.unmarshal(studentXML, Student.class);
+            //Update the learner's details in the database
+            edit(learner);
         } else {
             throw new Exception("This XML file is not valid.");
         }

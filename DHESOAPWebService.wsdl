@@ -13,16 +13,108 @@
 <message name="Exception">
 <part name="fault" element="tns:Exception"/>
 </message>
+<message name="getLearner">
+<part name="parameters" element="tns:getLearner"/>
+</message>
+<message name="getLearnerResponse">
+<part name="parameters" element="tns:getLearnerResponse"/>
+</message>
+<message name="getLearners">
+<part name="parameters" element="tns:getLearners"/>
+</message>
+<message name="getLearnersResponse">
+<part name="parameters" element="tns:getLearnersResponse"/>
+</message>
+<message name="deleteLearner">
+<part name="parameters" element="tns:deleteLearner"/>
+</message>
+<message name="deleteLearnerResponse">
+<part name="parameters" element="tns:deleteLearnerResponse"/>
+</message>
+<message name="updateLearner">
+<part name="parameters" element="tns:updateLearner"/>
+</message>
+<message name="updateLearnerResponse">
+<part name="parameters" element="tns:updateLearnerResponse"/>
+</message>
 <portType name="DHESOAPWebService">
 <operation name="addLearner">
 <input wsam:Action="http://jws.dhe.org.za/DHESOAPWebService/addLearnerRequest" message="tns:addLearner"/>
 <output wsam:Action="http://jws.dhe.org.za/DHESOAPWebService/addLearnerResponse" message="tns:addLearnerResponse"/>
 <fault message="tns:Exception" name="Exception" wsam:Action="http://jws.dhe.org.za/DHESOAPWebService/addLearner/Fault/Exception"/>
 </operation>
+<operation name="getLearner">
+<input wsam:Action="http://jws.dhe.org.za/DHESOAPWebService/getLearnerRequest" message="tns:getLearner"/>
+<output wsam:Action="http://jws.dhe.org.za/DHESOAPWebService/getLearnerResponse" message="tns:getLearnerResponse"/>
+<fault message="tns:Exception" name="Exception" wsam:Action="http://jws.dhe.org.za/DHESOAPWebService/getLearner/Fault/Exception"/>
+</operation>
+<operation name="getLearners">
+<input wsam:Action="http://jws.dhe.org.za/DHESOAPWebService/getLearnersRequest" message="tns:getLearners"/>
+<output wsam:Action="http://jws.dhe.org.za/DHESOAPWebService/getLearnersResponse" message="tns:getLearnersResponse"/>
+<fault message="tns:Exception" name="Exception" wsam:Action="http://jws.dhe.org.za/DHESOAPWebService/getLearners/Fault/Exception"/>
+</operation>
+<operation name="deleteLearner">
+<input wsam:Action="http://jws.dhe.org.za/DHESOAPWebService/deleteLearnerRequest" message="tns:deleteLearner"/>
+<output wsam:Action="http://jws.dhe.org.za/DHESOAPWebService/deleteLearnerResponse" message="tns:deleteLearnerResponse"/>
+<fault message="tns:Exception" name="Exception" wsam:Action="http://jws.dhe.org.za/DHESOAPWebService/deleteLearner/Fault/Exception"/>
+</operation>
+<operation name="updateLearner">
+<input wsam:Action="http://jws.dhe.org.za/DHESOAPWebService/updateLearnerRequest" message="tns:updateLearner"/>
+<output wsam:Action="http://jws.dhe.org.za/DHESOAPWebService/updateLearnerResponse" message="tns:updateLearnerResponse"/>
+<fault message="tns:Exception" name="Exception" wsam:Action="http://jws.dhe.org.za/DHESOAPWebService/updateLearner/Fault/Exception"/>
+</operation>
 </portType>
 <binding name="DHESOAPWebServicePortBinding" type="tns:DHESOAPWebService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
 <operation name="addLearner">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</fault>
+</operation>
+<operation name="getLearner">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</fault>
+</operation>
+<operation name="getLearners">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</fault>
+</operation>
+<operation name="deleteLearner">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</fault>
+</operation>
+<operation name="updateLearner">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

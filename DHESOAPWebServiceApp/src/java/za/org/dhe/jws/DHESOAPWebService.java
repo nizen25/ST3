@@ -5,12 +5,14 @@
  */
 package za.org.dhe.jws;
 
+import java.util.List;
 import javax.ejb.EJB;
 import javax.jws.WebService;
 import javax.ejb.Stateless;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import za.org.dhe.business.LearnerFacadeLocal;
+import za.org.dhe.entities.Learner;
 
 /**
  *
@@ -28,4 +30,23 @@ public class DHESOAPWebService {
         ejbRef.addLearner(learnerXML);
     }
     
+    @WebMethod(operationName = "getLearner")
+    public Learner getLearner(@WebParam(name = "id") Long id) throws Exception {
+        return ejbRef.getLearner(id);
+    }
+
+    @WebMethod(operationName = "getLearners")
+    public List<Learner> getLearners() throws Exception {
+        return ejbRef.getLearners();
+    }
+
+    @WebMethod(operationName = "deleteLearner")
+    public void deleteLearner(@WebParam(name = "id") Long id) throws Exception {
+        ejbRef.deleteLearner(id);
+    }
+
+    @WebMethod(operationName = "updateLearner")
+    public void updateLearner(@WebParam(name = "learnerXML") String learnerXML) throws Exception {
+        ejbRef.updateLearner(learnerXML);
+    }
 }
