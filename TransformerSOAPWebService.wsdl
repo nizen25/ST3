@@ -4,25 +4,71 @@
 <xsd:import namespace="http://jws.transformer.com/" schemaLocation="http://localhost:8080/TransformerSOAPWebService/TransformerSOAPWebService?xsd=1"/>
 </xsd:schema>
 </types>
+<message name="forwardUpdate">
+<part name="parameters" element="tns:forwardUpdate"/>
+</message>
+<message name="forwardUpdateResponse">
+<part name="parameters" element="tns:forwardUpdateResponse"/>
+</message>
+<message name="Exception">
+<part name="fault" element="tns:Exception"/>
+</message>
 <message name="forwardStudent">
 <part name="parameters" element="tns:forwardStudent"/>
 </message>
 <message name="forwardStudentResponse">
 <part name="parameters" element="tns:forwardStudentResponse"/>
 </message>
-<message name="Exception">
-<part name="fault" element="tns:Exception"/>
+<message name="forwardDelete">
+<part name="parameters" element="tns:forwardDelete"/>
+</message>
+<message name="forwardDeleteResponse">
+<part name="parameters" element="tns:forwardDeleteResponse"/>
 </message>
 <portType name="TransformerSOAPWebService">
+<operation name="forwardUpdate">
+<input wsam:Action="http://jws.transformer.com/TransformerSOAPWebService/forwardUpdateRequest" message="tns:forwardUpdate"/>
+<output wsam:Action="http://jws.transformer.com/TransformerSOAPWebService/forwardUpdateResponse" message="tns:forwardUpdateResponse"/>
+<fault message="tns:Exception" name="Exception" wsam:Action="http://jws.transformer.com/TransformerSOAPWebService/forwardUpdate/Fault/Exception"/>
+</operation>
 <operation name="forwardStudent">
 <input wsam:Action="http://jws.transformer.com/TransformerSOAPWebService/forwardStudentRequest" message="tns:forwardStudent"/>
 <output wsam:Action="http://jws.transformer.com/TransformerSOAPWebService/forwardStudentResponse" message="tns:forwardStudentResponse"/>
 <fault message="tns:Exception" name="Exception" wsam:Action="http://jws.transformer.com/TransformerSOAPWebService/forwardStudent/Fault/Exception"/>
 </operation>
+<operation name="forwardDelete">
+<input wsam:Action="http://jws.transformer.com/TransformerSOAPWebService/forwardDeleteRequest" message="tns:forwardDelete"/>
+<output wsam:Action="http://jws.transformer.com/TransformerSOAPWebService/forwardDeleteResponse" message="tns:forwardDeleteResponse"/>
+<fault message="tns:Exception" name="Exception" wsam:Action="http://jws.transformer.com/TransformerSOAPWebService/forwardDelete/Fault/Exception"/>
+</operation>
 </portType>
 <binding name="TransformerSOAPWebServicePortBinding" type="tns:TransformerSOAPWebService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="forwardUpdate">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</fault>
+</operation>
 <operation name="forwardStudent">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</fault>
+</operation>
+<operation name="forwardDelete">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

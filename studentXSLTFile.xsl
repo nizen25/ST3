@@ -28,6 +28,7 @@
     </xsl:template>
     <xsl:template match="address">
         <address>
+ 	    <id><xsl:value-of select="id"/></id>
             <street><xsl:value-of select="street"/></street>
             <area><xsl:value-of select="location"/></area>
             <areaCode><xsl:value-of select="code"/></areaCode>

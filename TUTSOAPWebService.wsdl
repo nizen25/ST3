@@ -4,14 +4,20 @@
 <xsd:import namespace="http://jws.tut.ac.za/" schemaLocation="http://localhost:8080/TUTSOAPWebService/TUTSOAPWebService?xsd=1"/>
 </xsd:schema>
 </types>
+<message name="addStudent">
+<part name="parameters" element="tns:addStudent"/>
+</message>
+<message name="addStudentResponse">
+<part name="parameters" element="tns:addStudentResponse"/>
+</message>
+<message name="Exception">
+<part name="fault" element="tns:Exception"/>
+</message>
 <message name="getStudent">
 <part name="parameters" element="tns:getStudent"/>
 </message>
 <message name="getStudentResponse">
 <part name="parameters" element="tns:getStudentResponse"/>
-</message>
-<message name="Exception">
-<part name="fault" element="tns:Exception"/>
 </message>
 <message name="updateStudent">
 <part name="parameters" element="tns:updateStudent"/>
@@ -31,13 +37,12 @@
 <message name="getStudentsResponse">
 <part name="parameters" element="tns:getStudentsResponse"/>
 </message>
-<message name="addStudent">
-<part name="parameters" element="tns:addStudent"/>
-</message>
-<message name="addStudentResponse">
-<part name="parameters" element="tns:addStudentResponse"/>
-</message>
 <portType name="TUTSOAPWebService">
+<operation name="addStudent">
+<input wsam:Action="http://jws.tut.ac.za/TUTSOAPWebService/addStudentRequest" message="tns:addStudent"/>
+<output wsam:Action="http://jws.tut.ac.za/TUTSOAPWebService/addStudentResponse" message="tns:addStudentResponse"/>
+<fault message="tns:Exception" name="Exception" wsam:Action="http://jws.tut.ac.za/TUTSOAPWebService/addStudent/Fault/Exception"/>
+</operation>
 <operation name="getStudent">
 <input wsam:Action="http://jws.tut.ac.za/TUTSOAPWebService/getStudentRequest" message="tns:getStudent"/>
 <output wsam:Action="http://jws.tut.ac.za/TUTSOAPWebService/getStudentResponse" message="tns:getStudentResponse"/>
@@ -58,14 +63,21 @@
 <output wsam:Action="http://jws.tut.ac.za/TUTSOAPWebService/getStudentsResponse" message="tns:getStudentsResponse"/>
 <fault message="tns:Exception" name="Exception" wsam:Action="http://jws.tut.ac.za/TUTSOAPWebService/getStudents/Fault/Exception"/>
 </operation>
-<operation name="addStudent">
-<input wsam:Action="http://jws.tut.ac.za/TUTSOAPWebService/addStudentRequest" message="tns:addStudent"/>
-<output wsam:Action="http://jws.tut.ac.za/TUTSOAPWebService/addStudentResponse" message="tns:addStudentResponse"/>
-<fault message="tns:Exception" name="Exception" wsam:Action="http://jws.tut.ac.za/TUTSOAPWebService/addStudent/Fault/Exception"/>
-</operation>
 </portType>
 <binding name="TUTSOAPWebServicePortBinding" type="tns:TUTSOAPWebService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="addStudent">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</fault>
+</operation>
 <operation name="getStudent">
 <soap:operation soapAction=""/>
 <input>
@@ -103,18 +115,6 @@
 </fault>
 </operation>
 <operation name="getStudents">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-<fault name="Exception">
-<soap:fault name="Exception" use="literal"/>
-</fault>
-</operation>
-<operation name="addStudent">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

@@ -13,7 +13,8 @@
     </xs:complexType>  
     <xs:complexType name="addressType">
         <xs:sequence>
-            <xs:element name="street" type="xs:string"/>
+            <xs:element name="id" type="xs:long"/>
+	    <xs:element name="street" type="xs:string"/>
             <xs:element name="area" type="xs:string"/>
             <xs:element name="areaCode" type="xs:string"/>
         </xs:sequence>
