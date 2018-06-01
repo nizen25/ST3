@@ -84,7 +84,7 @@ public class PhysicalAddress implements Serializable {
 
     @Override
     public String toString() {
-        return "za.org.dhe.entities.PhysicalAddress[ id=" + id + " ]";
+        return "PhysicalAddress{" + "id=" + id + ", street=" + street + ", area=" + area + ", areaCode=" + areaCode + '}';
     }
-    
+
 }

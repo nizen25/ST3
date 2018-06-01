@@ -12,10 +12,11 @@ import za.ac.tut.entities.Address;
 
 /**
  *
- * @author localhost
+ * @author sydney
  */
 @Stateless
 public class AddressFacade extends AbstractFacade<Address> implements AddressFacadeLocal {
+
     @PersistenceContext(unitName = "TUTSOAPWebServiceAppPU")
     private EntityManager em;
 

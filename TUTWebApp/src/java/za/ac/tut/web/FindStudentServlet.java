@@ -25,7 +25,7 @@ import za.ac.tut.jws.client.TUTSOAPWebService_Service;
  */
 public class FindStudentServlet extends HttpServlet {
 
-    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/TUTSOAPWebService/TUTSOAPWebService.wsdl")
+    @WebServiceRef(wsdlLocation = "/home/sydney/TUTSOAPWebService.wsdl")
     private TUTSOAPWebService_Service service;
     
     @Override
@@ -33,9 +33,17 @@ public class FindStudentServlet extends HttpServlet {
         final String id = request.getParameter("id");
         try {
             final Student student = service.getTUTSOAPWebServicePort().getStudent(Long.valueOf(id));
-            request.setAttribute("student", student);
-            final RequestDispatcher dispatcher = request.getRequestDispatcher("student.jsp");
-            dispatcher.forward(request, response);
+            RequestDispatcher dispatcher;
+            if (student == null) {
+                request.setAttribute("error", "Student with id " + id + " doesn't exist!");
+                dispatcher = request.getRequestDispatcher("find_student.jsp");
+                dispatcher.forward(request, response);
+            } else {
+                request.setAttribute("student", student);
+                request.setAttribute("found", "Student found!");
+                dispatcher = request.getRequestDispatcher("update_student.jsp");
+                dispatcher.forward(request, response);
+            }
         } catch (Exception_Exception ex) {
             Logger.getLogger(FindStudentServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

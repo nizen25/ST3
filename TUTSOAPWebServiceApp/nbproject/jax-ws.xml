@@ -7,9 +7,9 @@
   </services>
   <clients>
     <client name="TransformerSOAPWebService">
-      <wsdl-url>http://localhost:8080/TransformerSOAPWebService/TransformerSOAPWebService?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/TransformerSOAPWebService/TransformerSOAPWebService.wsdl</local-wsdl-file>
-      <package-name forceReplace="true">za.ac.tut.jws.client</package-name>
+      <wsdl-url>file:/home/sydney/TransformerSOAPWebService.wsdl</wsdl-url>
+      <local-wsdl-file>TransformerSOAPWebService.wsdl</local-wsdl-file>
+      <package-name>com.transformer.jws</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
         <wsimport-option>
@@ -26,7 +26,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/TransformerSOAPWebService/TransformerSOAPWebService?wsdl</wsimport-option-value>
+          <wsimport-option-value>file:/home/sydney/TransformerSOAPWebService.wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>
@@ -35,10 +35,6 @@
         <wsimport-option>
           <wsimport-option-name>xendorsed</wsimport-option-name>
           <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>package</wsimport-option-name>
-          <wsimport-option-value>za.ac.tut.jws.client</wsimport-option-value>
         </wsimport-option>
       </wsimport-options>
     </client>

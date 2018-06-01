@@ -41,8 +41,8 @@
     </target>
     <target name="wsimport-client-DHESOAPWebService" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/DHESOAPWebService"/>
-        <property name="wsdl-DHESOAPWebService" location="/home/sydney/DHESOAPWebService.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/DHESOAPWebService" destdir="${build.generated.dir}/jax-wsCache/DHESOAPWebService" wsdl="${wsdl-DHESOAPWebService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/DHESOAPWebService/DHESOAPWebService?wsdl" xnocompile="true" xendorsed="true" package="com.transformer.jws.client">
+        <property name="wsdl-DHESOAPWebService" location="${meta.inf}/xml-resources/web-service-references/DHESOAPWebService/wsdl/DHESOAPWebService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/DHESOAPWebService" destdir="${build.generated.dir}/jax-wsCache/DHESOAPWebService" wsdl="${wsdl-DHESOAPWebService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="file:/home/sydney/DHESOAPWebService.wsdl" xnocompile="true" xendorsed="true" package="com.transformer.client">
             <depends file="${wsdl-DHESOAPWebService}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/DHESOAPWebService"/>
         </wsimport>
@@ -54,58 +54,7 @@
     </target>
     <target name="wsimport-client-clean-DHESOAPWebService" depends="-init-project">
         <delete dir="${build.generated.dir}/jax-wsCache/DHESOAPWebService"/>
-        <delete dir="${build.generated.sources.dir}/jax-ws/com/transformer/jws/client"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/transformer/client"/>
     </target>
-    <target name="wsimport-client-DHESOAPWebService_1" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_1"/>
-        <property name="wsdl-DHESOAPWebService_1" location="${meta.inf}/xml-resources/web-service-references/DHESOAPWebService_1/wsdl/localhost_8080/DHESOAPWebService/DHESOAPWebService.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_1" destdir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_1" wsdl="${wsdl-DHESOAPWebService_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/DHESOAPWebService/DHESOAPWebService?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${wsdl-DHESOAPWebService_1}"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_1"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_1">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-DHESOAPWebService_1" depends="-init-project">
-        <delete dir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_1"/>
-        <delete dir="${build.generated.sources.dir}/jax-ws/za/org/dhe/jws"/>
-    </target>
-    <target name="wsimport-client-DHESOAPWebService_2" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_2"/>
-        <property name="wsdl-DHESOAPWebService_2" location="${meta.inf}/xml-resources/web-service-references/DHESOAPWebService_2/wsdl/localhost_8080/DHESOAPWebService/DHESOAPWebService.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_2" destdir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_2" wsdl="${wsdl-DHESOAPWebService_2}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/DHESOAPWebService/DHESOAPWebService?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${wsdl-DHESOAPWebService_2}"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_2"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_2">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-DHESOAPWebService_2" depends="-init-project">
-        <delete dir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_2"/>
-        <delete dir="${build.generated.sources.dir}/jax-ws/za/org/dhe/jws"/>
-    </target>
-    <target name="wsimport-client-DHESOAPWebService_3" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_3"/>
-        <property name="wsdl-DHESOAPWebService_3" location="${meta.inf}/xml-resources/web-service-references/DHESOAPWebService_3/wsdl/localhost_8080/DHESOAPWebService/DHESOAPWebService.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_3" destdir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_3" wsdl="${wsdl-DHESOAPWebService_3}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/DHESOAPWebService/DHESOAPWebService?wsdl" xnocompile="true" xendorsed="true" package="com.transformer.jws.client">
-            <depends file="${wsdl-DHESOAPWebService_3}"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_3"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_3">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-DHESOAPWebService_3" depends="-init-project">
-        <delete dir="${build.generated.dir}/jax-wsCache/DHESOAPWebService_3"/>
-        <delete dir="${build.generated.sources.dir}/jax-ws/com/transformer/jws/client"/>
-    </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-DHESOAPWebService, wsimport-client-DHESOAPWebService_1, wsimport-client-DHESOAPWebService_2, wsimport-client-DHESOAPWebService_3"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-DHESOAPWebService"/>
 </project>

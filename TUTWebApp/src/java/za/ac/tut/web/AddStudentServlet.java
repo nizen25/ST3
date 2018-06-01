@@ -22,7 +22,7 @@ import za.ac.tut.jws.client.TUTSOAPWebService_Service;
  * @author localhost
  */
 public class AddStudentServlet extends HttpServlet {
-    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/TUTSOAPWebService/TUTSOAPWebService.wsdl")
+    @WebServiceRef(wsdlLocation = "/home/sydney/TUTSOAPWebService.wsdl")
     private TUTSOAPWebService_Service service;
 
     @Override

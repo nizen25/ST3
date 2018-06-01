@@ -11,7 +11,7 @@ import za.ac.tut.entities.Address;
 
 /**
  *
- * @author localhost
+ * @author sydney
  */
 @Local
 public interface AddressFacadeLocal {

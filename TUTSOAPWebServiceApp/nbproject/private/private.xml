@@ -3,15 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/sydney/Documents/PersonalDocs/BTech/TPG401T/projects/TUTSOAPWebServiceApp/src/java/za/ac/tut/jws/TUTSOAPWebService.java</file>
-            <file>file:/home/sydney/Documents/PersonalDocs/BTech/TPG401T/projects/TUTSOAPWebServiceApp/nbproject/jaxws-build.xml</file>
-            <file>file:/home/sydney/Documents/PersonalDocs/BTech/TPG401T/projects/TUTSOAPWebServiceApp/catalog.xml</file>
-            <file>file:/home/sydney/Documents/PersonalDocs/BTech/TPG401T/projects/TUTSOAPWebServiceApp/src/java/za/ac/tut/entities/Address.java</file>
-            <file>file:/home/sydney/Documents/PersonalDocs/BTech/TPG401T/projects/TUTSOAPWebServiceApp/src/conf/jax-ws-catalog.xml</file>
-            <file>file:/home/sydney/Documents/PersonalDocs/BTech/TPG401T/projects/TUTSOAPWebServiceApp/src/conf/persistence.xml</file>
-            <file>file:/home/sydney/Documents/PersonalDocs/BTech/TPG401T/projects/TUTSOAPWebServiceApp/src/conf/xml-resources/web-service-references/TransformerSOAPWebService/wsdl/MEMANIV-LPT2_8080/TransformerSOAPWebService/TransformerSOAPWebService.wsdl</file>
-            <file>file:/home/sydney/Documents/PersonalDocs/BTech/TPG401T/projects/TUTSOAPWebServiceApp/src/java/za/ac/tut/business/StudentFacade.java</file>
-            <file>file:/home/sydney/Documents/PersonalDocs/BTech/TPG401T/projects/TUTSOAPWebServiceApp/src/java/za/ac/tut/entities/Student.java</file>
+            <file>file:/home/sydney/SOAP/ST3/TUTSOAPWebServiceApp/src/java/za/ac/tut/business/AddressFacadeLocal.java</file>
+            <file>file:/home/sydney/SOAP/ST3/TUTSOAPWebServiceApp/src/java/za/ac/tut/business/StudentFacadeLocal.java</file>
+            <file>file:/home/sydney/SOAP/ST3/TUTSOAPWebServiceApp/src/java/za/ac/tut/business/AddressFacade.java</file>
+            <file>file:/home/sydney/SOAP/ST3/TUTSOAPWebServiceApp/src/java/za/ac/tut/entities/Address.java</file>
+            <file>file:/home/sydney/SOAP/ST3/TUTSOAPWebServiceApp/src/java/za/ac/tut/jws/TUTSOAPWebService.java</file>
+            <file>file:/home/sydney/SOAP/ST3/TUTSOAPWebServiceApp/src/java/za/ac/tut/business/AbstractFacade.java</file>
+            <file>file:/home/sydney/SOAP/ST3/TUTSOAPWebServiceApp/src/java/za/ac/tut/business/StudentFacade.java</file>
+            <file>file:/home/sydney/SOAP/ST3/TUTSOAPWebServiceApp/src/java/za/ac/tut/entities/Student.java</file>
         </group>
     </open-files>
 </project-private>

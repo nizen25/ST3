@@ -7,9 +7,9 @@
   </services>
   <clients>
     <client name="DHESOAPWebService">
-      <wsdl-url>http://localhost:8080/DHESOAPWebService/DHESOAPWebService?wsdl</wsdl-url>
-      <local-wsdl-file>/home/sydney/DHESOAPWebService.wsdl</local-wsdl-file>
-      <package-name forceReplace="true">com.transformer.jws.client</package-name>
+      <wsdl-url>file:/home/sydney/DHESOAPWebService.wsdl</wsdl-url>
+      <local-wsdl-file>DHESOAPWebService.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">com.transformer.client</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
         <wsimport-option>
@@ -26,7 +26,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/DHESOAPWebService/DHESOAPWebService?wsdl</wsimport-option-value>
+          <wsimport-option-value>file:/home/sydney/DHESOAPWebService.wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>
@@ -38,107 +38,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>package</wsimport-option-name>
-          <wsimport-option-value>com.transformer.jws.client</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
-    </client>
-    <client name="DHESOAPWebService_1">
-      <wsdl-url>http://localhost:8080/DHESOAPWebService/DHESOAPWebService?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/DHESOAPWebService/DHESOAPWebService.wsdl</local-wsdl-file>
-      <package-name>za.org.dhe.jws</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>fork</wsimport-option-name>
-          <wsimport-option-value>false</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/DHESOAPWebService/DHESOAPWebService?wsdl</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
-    </client>
-    <client name="DHESOAPWebService_2">
-      <wsdl-url>http://localhost:8080/DHESOAPWebService/DHESOAPWebService?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/DHESOAPWebService/DHESOAPWebService.wsdl</local-wsdl-file>
-      <package-name>za.org.dhe.jws</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>fork</wsimport-option-name>
-          <wsimport-option-value>false</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/DHESOAPWebService/DHESOAPWebService?wsdl</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
-    </client>
-    <client name="DHESOAPWebService_3">
-      <wsdl-url>http://localhost:8080/DHESOAPWebService/DHESOAPWebService?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/DHESOAPWebService/DHESOAPWebService.wsdl</local-wsdl-file>
-      <package-name forceReplace="true">com.transformer.jws.client</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>fork</wsimport-option-name>
-          <wsimport-option-value>false</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/DHESOAPWebService/DHESOAPWebService?wsdl</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>package</wsimport-option-name>
-          <wsimport-option-value>com.transformer.jws.client</wsimport-option-value>
+          <wsimport-option-value>com.transformer.client</wsimport-option-value>
         </wsimport-option>
       </wsimport-options>
     </client>

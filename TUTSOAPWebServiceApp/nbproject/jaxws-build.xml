@@ -41,8 +41,8 @@
     </target>
     <target name="wsimport-client-TransformerSOAPWebService" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/TransformerSOAPWebService"/>
-        <property name="wsdl-TransformerSOAPWebService" location="/home/sydney/TransformerSOAPWebService.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/TransformerSOAPWebService" destdir="${build.generated.dir}/jax-wsCache/TransformerSOAPWebService" wsdl="${wsdl-TransformerSOAPWebService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/TransformerSOAPWebService/TransformerSOAPWebService?wsdl" xnocompile="true" xendorsed="true" package="za.ac.tut.jws.client">
+        <property name="wsdl-TransformerSOAPWebService" location="${meta.inf}/xml-resources/web-service-references/TransformerSOAPWebService/wsdl/TransformerSOAPWebService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/TransformerSOAPWebService" destdir="${build.generated.dir}/jax-wsCache/TransformerSOAPWebService" wsdl="${wsdl-TransformerSOAPWebService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="file:/home/sydney/TransformerSOAPWebService.wsdl" xnocompile="true" xendorsed="true">
             <depends file="${wsdl-TransformerSOAPWebService}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/TransformerSOAPWebService"/>
         </wsimport>
@@ -54,7 +54,7 @@
     </target>
     <target name="wsimport-client-clean-TransformerSOAPWebService" depends="-init-project">
         <delete dir="${build.generated.dir}/jax-wsCache/TransformerSOAPWebService"/>
-        <delete dir="${build.generated.sources.dir}/jax-ws/za/ac/tut/jws/client"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/transformer/jws"/>
     </target>
     <target name="wsimport-client-generate" depends="wsimport-client-TransformerSOAPWebService"/>
 </project>

@@ -12,6 +12,14 @@
         <servlet-name>FindStudentServlets</servlet-name>
         <servlet-class>za.ac.tut.web.FindStudentsServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteStudentServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.DeleteStudentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateStudentServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.UpdateStudentServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddStudentServlet</servlet-name>
         <url-pattern>/AddStudentServlet.do</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>FindStudentServlets</servlet-name>
         <url-pattern>/FindStudentsServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteStudentServlet</servlet-name>
+        <url-pattern>/DeleteStudentServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateStudentServlet</servlet-name>
+        <url-pattern>/UpdateStudentServlet.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

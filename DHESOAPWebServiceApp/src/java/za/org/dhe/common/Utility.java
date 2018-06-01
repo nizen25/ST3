@@ -29,7 +29,7 @@ import org.xml.sax.InputSource;
 
 /**
  *
- * @author localhost
+ * @author Sydney
  */
 public class Utility {
     public static boolean validate(String clientXML, String cdataclientxsd) throws Exception {

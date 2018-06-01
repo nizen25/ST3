@@ -33,9 +33,15 @@ public class FindStudentsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             final List<Student> students = service.getTUTSOAPWebServicePort().getStudents();
-            request.setAttribute("students", students);
-            final RequestDispatcher dispatcher = request.getRequestDispatcher("students.jsp");
-            dispatcher.forward(request, response);
+            if (students.size() == 0) {
+                request.setAttribute("zeroStudents", "No students currently enrolled!");
+                final RequestDispatcher dispatcher = request.getRequestDispatcher("students.jsp");
+                dispatcher.forward(request, response);
+            } else {
+                request.setAttribute("students", students);
+                final RequestDispatcher dispatcher = request.getRequestDispatcher("students.jsp");
+                dispatcher.forward(request, response);
+            }
         } catch (Exception_Exception ex) {
             Logger.getLogger(FindStudentServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

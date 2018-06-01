@@ -37,6 +37,7 @@ public class LearnerFacade extends AbstractFacade<Learner> implements LearnerFac
             Learner learner = (Learner)Utility.unmarshal(learnerXML, Learner.class);
             //add the student to the database
             create(learner);
+            System.out.println("LEARNER: " + getLearner(learner.getId()));
         } else {
             throw new Exception("This XML file is not valid.");
         }
@@ -55,16 +56,17 @@ public class LearnerFacade extends AbstractFacade<Learner> implements LearnerFac
 
     @Override
     public void deleteLearner(Long id) throws Exception {
-        
+        final Learner learner = getLearner(id);
+        if (learner != null) remove(learner);
     }
 
     @Override
-    public void updateLearner(String learnerXML) throws Exception {
-        String learnerXSDFile = "/home/sydney/learnerXSDFile.xsd";
+    public void updateLearner(final String learnerXML) throws Exception {
+        final String learnerXSDFile = "/home/sydney/learnerXSDFile.xsd";
         //validate this xml
         if (Utility.validate(learnerXML, learnerXSDFile)) {
             //umarshal the xml string: xml --> student object
-            Learner learner = (Learner) Utility.unmarshal(learnerXML, Learner.class);
+            final Learner learner = (Learner) Utility.unmarshal(learnerXML, Learner.class);
             //Update the learner's details in the database
             edit(learner);
         } else {

@@ -11,13 +11,15 @@ import za.ac.tut.entities.Student;
 
 /**
  *
- * @author localhost
+ * @author sydney
  */
 @Local
 public interface StudentFacadeLocal {
-    public void addStudent(String studentXML) throws Exception;
+
+    public void addStudent(String studentXML) throws Exception;   
     public Student getStudent(Long id) throws Exception;
     public List<Student> getStudents() throws Exception;
     public void deleteStudent(Long id) throws Exception;
-    public void updateStudent(String StudentXML) throws Exception;
+    public void updateStudent(String studentXML) throws Exception;
+    
 }

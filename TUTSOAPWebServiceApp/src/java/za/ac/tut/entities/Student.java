@@ -28,7 +28,7 @@ public class Student implements Serializable {
     private Long id;
     private String name;
     private String surname;
-    @OneToOne(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
+    @OneToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
     @JoinColumn(name="addr_fk")
     private Address address;
 

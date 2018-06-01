@@ -28,7 +28,7 @@ public class Learner implements Serializable {
     private Long id;
     private String firstName;
     private String lastName;
-    @OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name="addr_fk")
     private PhysicalAddress address;
 
@@ -89,7 +89,7 @@ public class Learner implements Serializable {
 
     @Override
     public String toString() {
-        return "za.org.dhe.entities.Learner[ id=" + id + " ]";
+        return "Learner{" + "id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + '}';
     }
     
 }

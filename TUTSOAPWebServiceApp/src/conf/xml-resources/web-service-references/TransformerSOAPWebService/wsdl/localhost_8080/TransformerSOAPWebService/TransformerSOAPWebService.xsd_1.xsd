@@ -2,9 +2,17 @@
 
 <xs:element name="Exception" type="tns:Exception"/>
 
+<xs:element name="forwardDelete" type="tns:forwardDelete"/>
+
+<xs:element name="forwardDeleteResponse" type="tns:forwardDeleteResponse"/>
+
 <xs:element name="forwardStudent" type="tns:forwardStudent"/>
 
 <xs:element name="forwardStudentResponse" type="tns:forwardStudentResponse"/>
+
+<xs:element name="forwardUpdate" type="tns:forwardUpdate"/>
+
+<xs:element name="forwardUpdateResponse" type="tns:forwardUpdateResponse"/>
 
 <xs:complexType name="forwardStudent">
 <xs:sequence>
@@ -20,5 +28,25 @@
 <xs:sequence>
 <xs:element name="message" type="xs:string" minOccurs="0"/>
 </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="forwardDelete">
+<xs:sequence>
+<xs:element name="id" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="forwardDeleteResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="forwardUpdate">
+<xs:sequence>
+<xs:element name="learnerXML" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="forwardUpdateResponse">
+<xs:sequence/>
 </xs:complexType>
 </xs:schema>
