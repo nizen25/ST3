@@ -33,12 +33,13 @@ public class AddStudentServlet extends HttpServlet {
             Long id = Long.parseLong(request.getParameter("id"));
             String name = request.getParameter("name");
             String surname = request.getParameter("surname");
+            Long addressId = Long.parseLong(request.getParameter("addressId"));
             String street = request.getParameter("street");
             String location = request.getParameter("location");
             String code = request.getParameter("code");
             
             //generate a student xml string
-            String studentXML = generateStudentXML(id, name, surname, street, location, code);
+            String studentXML = generateStudentXML(id, name, surname, addressId, street, location, code);
             
             System.out.println("XML:\n"+studentXML);
             
@@ -53,12 +54,13 @@ public class AddStudentServlet extends HttpServlet {
         }
     }
 
-    private String generateStudentXML(Long id, String name, String surname, String street, String location, String code) {
+    private String generateStudentXML(Long id, String name, String surname, Long addressId, String street, String location, String code) {
         String studentXML = "<student>" + 
                                 "<id>" + id + "</id>" +
                                 "<name>" + name + "</name>" +
                                 "<surname>" + surname + "</surname>" +
                                 "<address>" + 
+                                    "<id>" + addressId + "</id>" +
                                     "<street>" + street + "</street>" +
                                     "<location>" + location + "</location>" +
                                     "<code>" + code + "</code>" +
